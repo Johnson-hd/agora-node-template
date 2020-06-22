@@ -5,7 +5,7 @@ const auth = async (ctx: Context, next: Next) => {
     ctx.response.status = 401
     return
   }
-  next()
+  await next()
 }
 
 export default auth

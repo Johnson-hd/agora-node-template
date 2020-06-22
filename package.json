@@ -23,11 +23,10 @@
   },
   "homepage": "https://github.com/Johnson-hd/agora-node-template#readme",
   "dependencies": {
-    "agora-koa-decorator": "^1.0.1",
+    "agora-koa-decorator": "^1.0.3",
     "axios": "^0.19.2",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
-    "koa-router": "^9.0.1",
     "mysql2": "^2.1.0",
     "typeorm": "^0.2.25",
     "typescript": "^3.9.5"

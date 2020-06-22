@@ -30,6 +30,10 @@ export default class User {
   async testDB(ctx: Context) {
     const data = await getDBContent()
     console.log('data', data)
-    ctx.body = data
+    ctx.body = {
+      code: code.Ok,
+      msg: 'get /demo/db db',
+      data: data,
+    }
   }
 }

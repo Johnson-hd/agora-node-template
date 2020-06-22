@@ -244,10 +244,10 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-agora-koa-decorator@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/agora-koa-decorator/-/agora-koa-decorator-1.0.1.tgz#724571885686065b930b2c37962c0f4701a4cba4"
-  integrity sha512-Q1IDunXmCxtajdPJ6sOlYErlw4SQdeZnp9HKaRLxc5GKciTfz7lBUXlXX3HNUyC9as6Gn6keLP6YIeP9udPp8w==
+agora-koa-decorator@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/agora-koa-decorator/-/agora-koa-decorator-1.0.3.tgz#fe3b391ed54f091ea39466c385ba346aebfeae39"
+  integrity sha512-7hyvBAAcVzUhjvjYIcuOTQzUtmz6S/p+aZx4uRab471Nqt95Xw4fXWMwP4Ai359qCoKoXcF1ajn8fxEoBDLGCQ==
   dependencies:
     koa "^2.12.1"
     koa-bodyparser "^4.3.0"

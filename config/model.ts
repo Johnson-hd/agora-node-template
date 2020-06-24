@@ -3,12 +3,6 @@ export interface config {
   enterpriseWx: enterpriseWx
 }
 
-interface mysqlPool {
-  max: number
-  min: number
-  idle: number
-}
-
 interface mysql {
   host: string
   port: number
@@ -16,10 +10,8 @@ interface mysql {
   database: string
   username: string
   password: string
-  timezone: string
   logging: boolean
-  connectionLimit: number
-  pool: mysqlPool
+  entities: string[]
 }
 
 interface enterpriseWx {

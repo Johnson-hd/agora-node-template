@@ -1,0 +1,13 @@
+[
+  {
+    "name": "agora-node-template",
+    "script": "./lib/src/index.js",
+    // "error_file": "/data/logs/agora-node-template/err.log",
+    // "out_file": "/data/logs/agora-node-template/out.log",
+    "exec_mode": "cluster",
+    "log_date_format" :"YYYY-MM-DD HH:mm:ss.SSS",
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
+]

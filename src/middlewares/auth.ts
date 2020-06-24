@@ -1,4 +1,4 @@
-import { Context, Next } from 'Koa'
+import { Context, Next } from 'koa'
 
 const auth = async (ctx: Context, next: Next) => {
   if (!ctx.auth) {

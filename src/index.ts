@@ -7,13 +7,15 @@ import { initDB } from './db'
 // import { sendEnterpriseWxMsgByRobot } from './utils/notice'
 
 const port = 8083 || process.env.PORT
+const env = process.env.NODE_ENV || 'development'
+const isDev = env === 'development'
 
 const initApp = async () => {
   await initDB()
 
   const app = new Koa()
 
-  bootstrap(path.resolve(__dirname, 'modules'))
+  bootstrap(path.resolve(__dirname, 'modules'), isDev ? '.ts' : '.js')
 
   app
     .use(async (ctx: Context, next: Next) => {

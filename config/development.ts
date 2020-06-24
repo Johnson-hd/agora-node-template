@@ -8,14 +8,8 @@ const _config: config = {
     database: 'demo',
     username: 'root',
     password: '',
-    timezone: '+08:00',
     logging: false,
-    connectionLimit: 20,
-    pool: {
-      max: 10,
-      min: 1,
-      idle: 1000,
-    },
+    entities: ['src/models/db/*.ts'],
   },
   enterpriseWx: {
     url: 'your enterprisewx robot url',

@@ -12,7 +12,7 @@ export const initDB = async () => {
     username: mysql.username,
     password: mysql.password,
     database: mysql.database,
-    entities: ['src/models/db/*.ts'],
+    entities: mysql.entities,
     logging: mysql.logging,
   })
 }

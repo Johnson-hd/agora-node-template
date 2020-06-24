@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --transpileOnly --no-notify --ignore-watch node_modules src/index.ts",
-    "start": "NODE_ENV=staging node lib/src/index.js",
+    "start": "node lib/src/index.js",
     "build": "tsc"
   },
   "repository": {

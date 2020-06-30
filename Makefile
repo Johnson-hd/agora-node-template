@@ -1,12 +1,12 @@
 # dockerhub登录
 .PHONY: docker.login.agorahub
 docker.login.agorahub:
-	@docker login -u web-hub -p thePassword hub.agoralab.co
+	@docker login -u username -p password hub.agoralab.co (username & password => to houdong@agora.io)
 
 # 镜像构建-staging
 .PHONY: docker.build-staging
 docker.build-staging:docker.login.agorahub
-	@docker build -t agora-node-template:staging -f ./Dockerfile.staging .
+	@docker build -t agora-node-template:staging -f ./Dockerfile .
 
 # 打tag-staging
 .PHONY: docker.tag-staging

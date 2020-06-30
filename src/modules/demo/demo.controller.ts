@@ -1,17 +1,17 @@
 import { Context } from 'koa'
 import { HttpMethod, Route, Controller } from 'agora-koa-decorator'
 
-import authMiddleware from '../../middlewares/auth'
-import logMiddleware from '../../middlewares/log'
-import { getDBContent } from './demo.service'
+import AuthMiddleware from '../../middlewares/auth'
+import LogMiddleware from '../../middlewares/log'
+import { GetDBContent } from './demo.service'
 import { Code } from '../../models/code'
 import { Response } from '../../models/response'
 import { TDemo } from '../../models/db/t-demo'
 
-@Controller('/demo', logMiddleware)
-export default class User {
+@Controller('/demo', LogMiddleware)
+export default class Demo {
   @Route('/', HttpMethod.GET)
-  async testGet(ctx: Context) {
+  async TestGet(ctx: Context) {
     ctx.body = <Response<any>>{
       code: Code.Ok,
       msg: 'get /demo',
@@ -19,8 +19,8 @@ export default class User {
     }
   }
 
-  @Route('/post', HttpMethod.POST, authMiddleware)
-  async testPost(ctx: Context) {
+  @Route('/post', HttpMethod.POST, AuthMiddleware)
+  async TestPost(ctx: Context) {
     ctx.body = <Response<any>>{
       code: Code.Ok,
       msg: 'post /demo/test by middleware',
@@ -29,8 +29,8 @@ export default class User {
   }
 
   @Route('/db', HttpMethod.GET)
-  async testDB(ctx: Context) {
-    const data = await getDBContent()
+  async TestDB(ctx: Context) {
+    const data = await GetDBContent()
     ctx.body = <Response<TDemo[]>>{
       code: Code.Ok,
       msg: 'get /demo/db db',

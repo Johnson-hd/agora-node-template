@@ -3,7 +3,7 @@
 
 ### 开发
 ```bash
-导入sql-init.sql（仅为了让你体验我们的数据库连接，后续您可以使用自己的表）
+导入sql-init.sql（不是必须的，只是为了查看我们项目的项目，你可以用自己的表，需要修改配置）
 
 yarn
 yarn dev
@@ -17,7 +17,7 @@ yarn dev
 
 ### 说明
 - 企业微信消息推送请使用`src/utils/notice.ts`
-- `Router`使用[agora-koa-decorator装饰器](https://www.npmjs.com/package/agora-koa-decorator)
+- `Router`使用[agora-koa-decorator](https://www.npmjs.com/package/agora-koa-decorator)装饰器
 - 如果有文档需求，建议使用[docway](http://www.docway.net/)，尽量不要用`swagger`，让文档和代码解耦
 - `ORM`库使用[typeorm](https://typeorm.io/)
 - 测试用例使用[mocha](https://mochajs.org/)，在`/test`目录

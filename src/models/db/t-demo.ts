@@ -10,4 +10,7 @@ export class TDemo extends BaseEntity {
 
   @Column()
   description: string
+
+  @Column({ name: 'created_at' })
+  createdAt: Date
 }

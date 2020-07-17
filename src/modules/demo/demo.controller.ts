@@ -3,7 +3,7 @@ import { HttpMethod, Route, Controller } from 'agora-koa-decorator'
 
 import AuthMiddleware from '../../middlewares/auth'
 import LogMiddleware from '../../middlewares/log'
-import { GetDBContent } from './demo.service'
+import { GetDBContent, CreateDBContent } from './demo.service'
 import { Code } from '../../models/code'
 import { Response } from '../../models/response'
 import { TDemo } from '../../models/db/t-demo'
@@ -28,8 +28,17 @@ export default class Demo {
     }
   }
 
+  @Route('/db', HttpMethod.POST)
+  async TestDBCreate(ctx: Context) {
+    await CreateDBContent()
+    ctx.body = <Response<TDemo[]>>{
+      code: Code.Ok,
+      msg: 'post insert content success!',
+    }
+  }
+
   @Route('/db', HttpMethod.GET)
-  async TestDB(ctx: Context) {
+  async TestDBGet(ctx: Context) {
     const data = await GetDBContent()
     ctx.body = <Response<TDemo[]>>{
       code: Code.Ok,

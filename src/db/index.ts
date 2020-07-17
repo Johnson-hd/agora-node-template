@@ -14,5 +14,6 @@ export const initDB = async () => {
     database: mysql.database,
     entities: mysql.entities,
     logging: mysql.logging,
+    timezone: mysql.timezone,
   })
 }

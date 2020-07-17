@@ -11,6 +11,7 @@ interface mysql {
   username: string
   password: string
   logging: boolean
+  timezone: string
   entities: string[]
 }
 

@@ -9,6 +9,7 @@ const _config: config = {
     username: 'root',
     password: '',
     logging: false,
+    timezone: '+00:00',
     entities: ['src/models/db/*.ts'],
   },
   enterpriseWx: {
